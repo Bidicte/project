@@ -1,8 +1,8 @@
- // components/LoginForm.tsx
+/* eslint-disable @typescript-eslint/no-unused-vars */
+// components/LoginForm.tsx
 import React, { useState } from 'react';
-import { authService } from '../../../services/auth/authService';
 import { ForgotPasswordModal } from './ForgotPasswordModal';
-import { useNavigate } from "react-router-dom";
+import { authService } from '../services/authService';
 
 export const LoginForm: React.FC = () => {
   const [credentials, setCredentials] = useState({
@@ -15,9 +15,6 @@ export const LoginForm: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showForgotPassword, setShowForgotPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const navigate = useNavigate();
-
   const validateForm = (): boolean => {
     const newErrors: { [key: string]: string } = {};
 
@@ -57,7 +54,7 @@ export const LoginForm: React.FC = () => {
       const authenticatedUser = authService.getUser();
       if (authenticatedUser) {
         // Force un refresh de la page ou navigation
-        navigate("/dashboard");
+        window.location.reload();
       }
       
     } catch (error) {

@@ -2,7 +2,7 @@
 import { useNavigate } from 'react-router-dom';
 
 const modules = [
-  { name: 'Users', path: '/users' },
+  { name: 'hebergement', path: '/hebergement' },
   { name: 'Billing', path: '/billing' },
   { name: 'Reports', path: '/reporting' },
 ];

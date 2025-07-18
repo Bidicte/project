@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "token": "fake-jwt-token-admin"
+    },
+    {
+      "id": "2",
+      "username": "demo",
+      "password": "demo456",
+      "token": "fake-jwt-token-demo"
+    },
+    {
+      "id": "58d7",
+      "email": "admin",
+      "password": "admin123",
+      "client": "chkci"
+    }
+  ]
+}
